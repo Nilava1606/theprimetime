@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThePrimtTime.</title>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="navbox rounded-xl  mx-5 my-5 lg1:mx-8 lg1:my-5 shadow-xl h-12 w-90% flex justify-center bg-white">
+            <img class="h-6 w-44 mt-2 lg1:mt-1 lg1:h-8 lg1:w-52" src="logo.png" alt="logo">
+        </div>
+        <nav class="bottomnav mt-10 sm:hidden md:hidden lg1:hidden lg2:hidden lg3:block w-80% bg-offwhite-500 shadow-xl border-y-2 mx-8">
+            <ul class="flex space-x-2 xl:space-x-8 ease-in duration-75  justify-center font-serif">
+                <a class="hover:border-x-2 border-red-700 px-2" onclick="bind('INDIA'),showhead()"><li>HOME</li></a>
+                <a class="hover:border-x-2 border-red-700 px-2" onclick="bind('LAW'),hidehead()"><li>LAW</li></a>
+                <a class="hover:border-x-2 border-red-700 px-2" onclick="bind('WORLD'),hidehead()"><li>WORLD</li></a>
+                <a class="hover:border-x-2 border-red-700 px-2" onclick="bind('EDUCATION'),hidehead()"><li>EDUCATION</li></a>
+                <a class="hover:border-x-2 border-red-700 px-2" onclick="bind('ENTERTAINMENT'),hidehead()"><li>ENTERTAINMENT</li></a>
+                <a class="hover:border-x-2 border-red-700 px-2" onclick="bind('BUSINESS'),hidehead()"><li>BUSINESS</li></a>
+                <a class="hover:border-x-2 border-red-700 px-2" onclick="bind('POLITICS'),hidehead()"><li>POLITICS</li></a>
+                <a class="hover:border-x-2 border-red-700 px-2" onclick="bind('BANKING'),hidehead()"><li>BANKING</li></a>
+                <a class="hover:border-x-2 border-red-700 px-2" onclick="bind('STOCKS'),hidehead()"><li>STOCKS</li></a>
+                <a class="hover:border-x-2 border-red-700 px-2" onclick="bind('SPORTS'),hidehead()"><li>SPORTS</li></a>
+                <a href="notes.html" class="hover:border-x-2 border-red-700 bg-red-800 text-white px-2"><li>NOTES</li></a>
+
+            </ul>
+            </nav>
+        <div class="flex justify-center gap-4 md:gap-4 md:ml-2">
+        <div class=" lg3:invisible xl:invisible"><i id="hammenu" onclick="show()" class="fa-solid fa-bars "></i></div>
+        <div id="togg" class="togg absolute hidden  bg-white mt-12  flex justify-center  transition ease-in duration-75 w-full h-full lg3:hidden xl:hidden">
+            <ul class="ease-in font-serif">
+                <i onclick="show()" class="fa-solid fa-xmark"></i>
+                <a class="hover:text-red-700 shadow-xl px-2" id="INDIA" onclick="show(),showhead(),bind('INDIA')"><li><pre>       HOME     </pre></li></a>
+                <a class="hover:text-red-700 shadow-xl px-2" href="news.html" id=""><li><pre class=" bg-red-700 rounded-xl text-white ml-2 px-2">QUICK HEADLINES</pre></li></a>
+                <a class="hover:text-red-700 shadow-xl px-2" id="LAW" onclick="show(),hidehead(), bind('LAW')"><li><pre>       LAW      </pre></li></a>      
+                <a class="hover:text-red-700 shadow-xl px-2" id="WORLD" onclick="show(),hidehead(),bind('WORLD')"><li><pre>      WORLD     </pre></li></a>
+                <a class="hover:text-red-700 shadow-xl px-2" id="EDUCATION" onclick="show(),hidehead(), bind('EDUCATION')"><li><pre>     EDUCATION  </pre></li></a>
+                <a class="hover:text-red-700 shadow-xl px-2" id="BUSINESS" onclick="show(),hidehead(), bind('BUSINESS')"><li><pre>     BUSINESS   </pre></li></a>
+                <a class="hover:text-red-700 shadow-xl px-2" id="POLITICS" onclick="show(),hidehead(), bind('POLITICS')"><li><pre>     POLITICS   </pre></li></a>
+                <a class="hover:text-red-700 shadow-xl px-2" id="BANKING" onclick="show(),hidehead(), bind('BANKING')"><li><pre>      BANKING   </pre></li></a>
+                <a class="hover:text-red-700 shadow-xl px-2" id="STOCKS" onclick="show(),hidehead(), bind('STOCKS')"><li><pre>      STOCKS    </pre></li></a>
+                <a class="hover:text-red-700 shadow-xl px-2" id="SPORTS" onclick="show(),hidehead(), bind('SPORTS')"><li><pre>      SPORTS    </pre></li></a>
+                <a href="dictionary.html" class=" hover:text-red-700 shadow-xl px-2" id=""><li><pre class=" bg-red-700 rounded-xl ml-2 text-white">    DICTIONARY   </pre></li></a>
+                <a href="notes.html" class=" hover:text-red-700 shadow-xl px-2" id=""><li><pre class=" bg-red-700 rounded-xl ml-2 text-white">    MAKE NOTES   </pre></li></a>
+            </ul>
+        </div>
+        <div class="flex justify-start"><a href="news.html"><button id="quick" class="sm:hidden md:hidden lg1:hidden lg2:hidden lg3:block xl:block h-fit w-fit bg-red-800 rounded-xl px-2 text-white mt-10 mr-5" ><i class="fa-solid fa-lightbulb"></i></button></a>
+        <a href="dictionary.html"><button id="quick" class="sm:hidden md:hidden lg1:hidden lg2:hidden lg3:block xl:block h-fit w-fit bg-red-800 rounded-xl px-2 text-white mt-10 " ><i class="fa-solid fa-book"></i></i></button></a>
+    </div>
+    <div class="input mr-4" id="input">
+            <input id="find" type="text" placeholder="Search" class="border-[1px] border-slate-300 shadow-sm rounded-xl pl-3 lg1:w-72 lg1:ml-6 lg2:ml-12 lg2:w-80 lg2:h-8 lg3:w-[420px] lg3:ml-[50px] xl:w-[610px] xl:ml-[80px] xl:mt-10 lg3:mt-10">
+            <button id="searchbtn"  class=""><i class="fa-solid fa-magnifying-glass sm:ml-3 md:ml-2 lg2:mr-24 lg3:mr-44"></i></button>
+        </div>
+        </header>
+    <div class="clickhead">
+    <h1 id="headtag" class="font-font-ubuntu font-bold text-xl pt-8 lg1:pt-8 pb-2 lg2:text-3xl lg2:py-7 lg2:pb-6 flex justify-center">HEADLINES</h1>
+    <div id="headlines" class="headlines w-100% gap-10 grid grid-cols-1 lg1:grid-cols-2 lg2:grid-cols-2 lg3:grid-cols-3 xl:grid-cols-3 mx-5 lg1:mx-8 lg2:mx-8 lg3:mx-8 xl:mx-8 my-5 font-font-ubuntu ">
+    </div></div>
+    <h1 class="font-font-ubuntu font-bold text-xl pt-4 lg1:pt-8 pb-6 lg2:text-3xl lg2:py-7 lg2:pb-6 flex justify-center">LATEST NEWS</h1>
+        <div class="cardData w-100% gap-10 grid grid-cols-1 lg1:grid-cols-2 lg2:grid-cols-2 lg3:grid-cols-3 xl:grid-cols-3 mx-5 lg1:mx-8 lg2:mx-8 lg3:mx-8 xl:mx-8 my-5 font-font-ubuntu " id="cardData">
+        </div>
+<footer>
+    <div class="about">
+        <h1 class="font-ubuntu font-bold text-xl pt-4 lg1:pt-8 py-2 lg2:text-3xl lg2:py-7 lg2:pb-6 flex justify-center">ABOUT</h1></div>
+    <div class="mx-5 my-5 lg1:mx-8 lg1:my-5 rounded-xl h-100% w-90% shadow-xl bg-neutral-200 text-white font-ubuntu h-auto">
+<img class="h-10 w-44 pt-4 ml-2" src="logo.png" alt="logo">
+<p class="text-black text-md px-3 pt-1">Questioning Everyday!</p>
+<p class="text-black text-md ml-3 pt-7">
+Office: <b>Howrah,WB</b></p>
+<p class="text-black text-md ml-3">
+    Contact No.- <b>+91 9874408524</b></p>
+<p class="text-black text-md ml-3">
+    Mail- <b>nilavabishnu@gmail.com</b></p>
+<p class="text-black text-md ml-3 pt-7">
+<b>FOLLOW US ON:</b></p>
+<div class="text-black flex justify-evenly w-20 ml-8 mt-2 pb-3"><a href="https://twitter.com/bishnunilava"><i class="fa-brands fa-twitter"></i></a>
+    <a href="https://www.instagram.com/aboutnilava/"><i class="fa-brands fa-instagram"></i></div></a>
+<div class="pt-6 pb-5">
+        <div class="flex justify-center font-font-ubuntu text-black text-sm">All rights reserved to the creator</div>
+    <div class="flex justify-center font-font-ubuntu font-bold text-black text-sm ">Nilava Bishnu</div>
+    <a href="about.html"><div class="flex justify-center font-font-ubuntu"><button class=" text-xs h-7 rounded-xl border-2 border-black w-20 mt-3 hover:bg-slate-400 text-white bg-slate-700 hover:text-black">Know More</button></a>
+</div></div>
+</div>
+</footer>
+</body>
+<script src="script.js"></script>
+</html>

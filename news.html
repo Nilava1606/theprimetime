@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThePrimeTime.</title>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-slate-100 bg-gradient-to-b">
+    <header>
+        <div class="navbox rounded-xl mx-5 my-5 lg1:mx-8 lg1:my-5 shadow-2xl h-12 w-90% flex justify-center bg-white">
+            <img class="h-6 w-44 mt-2 lg1:mt-1 lg1:h-8 lg1:w-52" src="logo.png" alt="logo">
+        </div>
+        <a href="notes.html"><div class="flex justify-end items-start sm:invisible md:invisible lg1:visible lg2:visible lg3:visible xl:visible"><button class="bg-red-800 text-white h-fit w-fit px-2 rounded-xl text-xl  border-2 border-black lg1:mr-12 lg2:ml-3 lg3:ml-6  xl:ml-10 xl:mt-0 ">NOTES</button></div></a>
+            <h1 id="newshead" class="font-font-ubuntu  font-bold text-xl pt-8 lg1:pt-8 pb-2 lg2:text-3xl lg2:py-7 lg2:pb-6 flex justify-center">HEADLINES</h1>
+            <div id="newsheadlines" class="newsheadlines w-100% gap-10 grid grid-cols-1 lg1:grid-cols-2 lg2:grid-cols-2 lg3:grid-cols-3 xl:grid-cols-3 mx-5 lg1:mx-8 lg2:mx-8 lg3:mx-8 xl:mx-8 my-5 font-font-ubuntu ">
+            </div>
+       <div id="newschannels" class="newschannels flex justify-center h-auto w-90%"> <div class="newschannels mb-5 grid grid-cols-2 xl:grid-cols-3 gap-10 lg1:gap-16 lg1:mt-4 lg2:gap-16 lg2:mt-6 lg3:gap-x-28 lg3:gap-y-16 lg3:mt-6 xl:gap-x-44 xl:gap-y-16 xl:mt-2 pt-6 ">
+            <img src="ndtv.png" onclick="displayhead('ndtv')" alt="" id="ndtv" class="shadow-xl cursor-pointer rounded-2xl h-24  w-36 border-black border-2">
+            <img src="ht.png" onclick="displayhead('hindustan times')" alt="" id="hindustan times" class="shadow-xl cursor-pointer rounded-2xl h-24  w-36 border-black border-2">
+            <img src="mc.jpg" onclick="displayhead('moneycontrol')" alt="" id="moneycontrol" class="shadow-xl cursor-pointer rounded-2xl h-24  w-36 border-2 border-black">
+            <img src="toi.jpg" onclick="displayhead('the times of india')" alt="" id="the times of india" class="shadow-xl cursor-pointer rounded-2xl h-24  w-36 border-2 border-black">
+            <img src="et.png" onclick="displayhead('the economic times')" alt="" id="the economic times" class="shadow-xl cursor-pointer rounded-2xl h-24  w-36 border-2 border-black">
+            <img src="cnbc.png" onclick="displayhead('cnbc')" alt="" id="cnbc" class="shadow-xl cursor-pointer rounded-2xl h-24  w-36 border-2 border-black">
+        </div>
+    </div>
+    <a href="notes.html"><div class=" items-start flex justify-center mt-10 sm:visible md:visible lg1:invisible lg2:invisible lg3:invisible xl:invisible"><button class="bg-red-800 text-white h-fit w-fit px-2 rounded-xl text-xl  border-2 border-black lg1:mr-12 lg2:ml-3 lg3:ml-6  xl:ml-10 xl:mt-0 ">NOTES</button></div></a>
+    </header>
+</body>
+<script src="news.js"></script>
+</html>
